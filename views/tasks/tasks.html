@@ -1,11 +1,13 @@
 <div class="page page-tasks">
-    <div class="row">
-        <div class="col-md-12">
+    
+     <div class="row">
+       
+          <div class="col-md-12">
             <section class="task-container" data-ng-controller="taskCtrl">
 
                 <form data-ng-submit="add()" class="add-task">
                     <input type="text"
-                           placeholder="What needs to be done?"
+                           placeholder="Add a campaign"
                            class="form-control"
                            data-ng-model="newTask"
                            autofocus>
@@ -52,6 +54,688 @@
                                 <span class="glyphicon glyphicon-remove"
                                       data-ng-click="remove(task, $index)"
                                       ></span>
+                            <div class="row">
+        <div class="col-sm-4" ng-scope data-ng-controller="CollapseDemoCtrl">
+                 <section class="panel panel-box">
+                        <div class="panel-top bg-facebook">
+                            <div class="divider divider"></div>
+                            <i class="fa fa-facebook size-h1"></i>
+                            <div class="divider divider"></div>
+                            
+                        </div>
+                        <div class="list-justified-container">
+                            <ul class="list-justified text-center">
+                                <li>
+                                    <p class="text-muted">Total Likes    <i class="fa fa-thumbs-o-up size-h4"></i></p><br>
+                                    <p class="size-h3">4,575</p>
+                                </li>
+                                <li>
+                                    <p class="text-muted">People Talking About This   <i class="fa fa-comments-o size-h4"></i></p>
+                                    <p class="size-h3">2,234</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="size-h4">Data Dossier</p>
+                        <div class="list-justified-container">
+                            <ul class="list-justified text-center">
+                                <li>
+                                    <p class="text-muted">Daily Engagement Rate
+                                    <p class="size-h4"><br>
+                                      <i class="fa fa-arrow-up size-h4"></i>  <span class="label label-success">9.778%</span></p>
+                                </li>
+                                <li>
+                                    <p class="text-muted">Weekly Reach
+                                    <p class="size-h4"><br>
+                                     <i class="fa fa-arrow-down size-h4"></i>  <span class="label label-danger">3.612%</span></p>
+                                    </li>
+                            </ul>
+                        </div>
+                    <!-- Modal -->
+            
+                            <div class="space" data-ng-controller="ModalDemoCtrl">
+                               <script type="text/ng-template" id="myModalContent.html">
+                                 <div class="modal-body">
+                                  <div class="panel-body" data-ng-controller="DatepickerDemoCtrl">
+                                   <div class="row">
+                                    <div class="col-sm-4">
+                                     <div class="input-group ui-datepicker">
+                                      <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                      <input type="text" 
+                                         class="form-control"
+                                         datepicker-popup="{{format}}"
+                                         ng-model="dt1"
+                                         is-open="opened"
+                                         datepicker-options="dateOptions" 
+                                         date-disabled="disabled(date, mode)"
+                                         ng-required="true" 
+                                         close-text="Close">
+                                      </div>
+                                      <div class="space">
+                                       <p>From: {{dt1 | date:'fullDate'}}</p>
+                                      </div>
+                                    <div class="input-group ui-datepicker">
+                                      <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                      <input type="text" 
+                                         class="form-control"
+                                         datepicker-popup="{{format}}"
+                                         ng-model="dt2"
+                                         is-open="closed"
+                                         datepicker-options="dateOptions" 
+                                         date-disabled="disabled(date, mode)"
+                                         ng-required="true" 
+                                         close-text="Close">
+                                      </div>
+                                      <div class="space">
+                                       <p>To: {{dt2 | date:'fullDate'}}</p>
+                                      </div>
+                                   </div>
+
+            <div class="col-sm-6">
+		<table class="table table-bordered table-striped">
+			                                                           <tbody>
+                                                                                        <tr>
+<td colspan="2" bgcolor="#335397">
+												
+												<center><i class="fa fa-facebook size-h3"></i></center>	
+												
+											</tr>
+											<tr>
+												<th>Total Posts</th>
+												<td>23</td>
+											</tr>
+											<tr>
+												<th>Likes</th>
+												<td>1,326</td>
+											</tr>
+											<tr>
+												<th>Comments</th>
+												<td>409</td>
+											</tr>
+											<tr>
+												<th>Shares</th>
+												<td >217</td>
+											</tr>
+                                                                                        <tr>
+												<th>Average Interactions/Post</th>
+												<td >43.5</td>
+											</tr>
+										</tbody>
+									</table>
+            </div>
+           </div>
+                 <div class="modal-footer">
+                                <button class="btn btn-primary" ng-click="ok()">OK</button>
+                                <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+                 </div>
+         </script>
+
+                           <a href="javascript:;" class="btn-icon btn-icon-sm bg-primary"><i class="fa fa-paw" ng-click="open()"></i></a>
+                           </div>
+            
+                         <!-- end Modal -->
+                    </section>
+             
+        </div>
+        <div class="col-sm-4">
+            <section class="panel panel-box">
+                        <div class="panel-top bg-twitter">
+                            <div class="divider divider"></div>
+                            <i class="fa fa-twitter size-h1"></i>
+                            <div class="divider divider"></div>
+                        </div>
+                        <div class="list-justified-container">
+                            <ul class="list-justified text-center">
+                                <li>
+                                       <p class="text-muted">Followers    <i class="fa fa-child size-h4"></i></p><br>
+                                       <p class="size-h3">1,231</p>
+                                    </li>
+                                <li>
+                                    <p class="text-muted">Total Tweets     <i class="fa fa-pencil size-h4"></i></p><br>
+                                    <p class="size-h3">69</p>
+                                    
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="size-h4">Data Dossier</p>
+                        <div class="list-justified-container">
+                            <ul class="list-justified text-center">
+                                <li>
+                                    <p class="text-muted">HashTag Volume
+                                    <p class="size-h4"><br>
+                                      <i class="fa fa-arrow-up size-h4"></i>  <span class="label label-success">34%</span></p>
+                                </li>
+                                <li>
+                                    <p class="text-muted">Handle Mentions
+                                    <p class="size-h4"><br>
+                                     <i class="fa fa-arrow-down size-h4"></i>  <span class="label label-danger">17%</span></p>
+                                    </li>
+                            </ul>
+                        </div>
+                <!-- Modal -->
+            
+                            <div class="space" data-ng-controller="ModalDemoCtrl">
+                               <script type="text/ng-template" id="myModalContent.html">
+                                 <div class="modal-body">
+                                  <div class="panel-body" data-ng-controller="DatepickerDemoCtrl">
+                                   <div class="row">
+                                    <div class="col-sm-4">
+                                     <div class="input-group ui-datepicker">
+                                      <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                      <input type="text" 
+                                         class="form-control"
+                                         datepicker-popup="{{format}}"
+                                         ng-model="dt1"
+                                         is-open="opened"
+                                         datepicker-options="dateOptions" 
+                                         date-disabled="disabled(date, mode)"
+                                         ng-required="true" 
+                                         close-text="Close">
+                                      </div>
+                                      <div class="space">
+                                       <p>From: {{dt1 | date:'fullDate'}}</p>
+                                      </div>
+                                    <div class="input-group ui-datepicker">
+                                      <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                      <input type="text" 
+                                         class="form-control"
+                                         datepicker-popup="{{format}}"
+                                         ng-model="dt2"
+                                         is-open="closed"
+                                         datepicker-options="dateOptions" 
+                                         date-disabled="disabled(date, mode)"
+                                         ng-required="true" 
+                                         close-text="Close">
+                                      </div>
+                                      <div class="space">
+                                       <p>To: {{dt2 | date:'fullDate'}}</p>
+                                      </div>
+                                   </div>
+
+            <div class="col-sm-6">
+		<table class="table table-bordered table-striped">
+			                                                           <tbody>
+                                                                                        <tr>
+<td colspan="2" bgcolor="#00c7f7">
+												
+												<center><i class="fa fa-twitter size-h3"></i></center>	
+												
+											</tr>
+											<tr>
+												<th>Total Tweets</th>
+												<td>23</td>
+											</tr>
+											<tr>
+												<th>Retweets</th>
+												<td>1,326</td>
+											</tr>
+											<tr>
+												<th>Favorites</th>
+												<td>409</td>
+											</tr>
+											
+                                                                                        <tr>
+												<th>Average Interactions/Post</th>
+												<td >43.5</td>
+											</tr>
+										</tbody>
+									</table>
+            </div>
+           </div>
+                 <div class="modal-footer">
+                                <button class="btn btn-primary" ng-click="ok()">OK</button>
+                                <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+                 </div>
+         </script>
+
+                           <a href="javascript:;" class="btn-icon btn-icon-sm bg-primary"><i class="fa fa-paw" ng-click="open()"></i></a>
+                           </div>
+            
+                         <!-- end Modal -->
+
+               </section>
+        </div>
+        <div class="col-sm-4">
+            <section class="panel panel-box">
+                        <div class="panel-top bg-youtube">
+                            <div class="divider divider"></div>
+                            <i class="fa fa-youtube size-h1"></i>
+                            <div class="divider divider"></div>
+                        </div>
+                        <div class="list-justified-container">
+                            <ul class="list-justified text-center">
+                                <li>
+                                       <p class="text-muted">Subscribers    <i class="fa fa-child size-h4"></i></p><br>
+                                       <p class="size-h3">925</p>
+                                 </li>
+                                 <li>
+                                       <p class="text-muted">Views    <i class="fa fa-eye size-h4"></i></p><br>
+                                       <p class="size-h3">925</p>
+                                 </li>
+                                 
+                            </ul>
+                        </div>
+                        <p class="size-h4">Data Dossier</p>
+                        <div class="list-justified-container">
+                            <ul class="list-justified text-center">
+                                <li>
+                                    <p class="text-muted">Total Views
+                                    <p class="size-h4"><br>
+                                      <i class="fa fa-arrow-up size-h4"></i>  <span class="label label-success">14.3%</span></p>
+                                </li>
+                                <li>
+                                    <p class="text-muted">Total Subscribers
+                                    <p class="size-h4"><br>
+                                     <i class="fa fa-arrow-up size-h4"></i>  <span class="label label-success">7%</span></p>
+                                    </li>
+                            </ul>
+                        </div>
+               <!-- Modal -->
+            
+                            <div class="space" data-ng-controller="ModalDemoCtrl">
+                               <script type="text/ng-template" id="myModalContent.html">
+                                 <div class="modal-body">
+                                  <div class="panel-body" data-ng-controller="DatepickerDemoCtrl">
+                                   <div class="row">
+                                    <div class="col-sm-4">
+                                     <div class="input-group ui-datepicker">
+                                      <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                      <input type="text" 
+                                         class="form-control"
+                                         datepicker-popup="{{format}}"
+                                         ng-model="dt1"
+                                         is-open="opened"
+                                         datepicker-options="dateOptions" 
+                                         date-disabled="disabled(date, mode)"
+                                         ng-required="true" 
+                                         close-text="Close">
+                                      </div>
+                                      <div class="space">
+                                       <p>From: {{dt1 | date:'fullDate'}}</p>
+                                      </div>
+                                    <div class="input-group ui-datepicker">
+                                      <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                      <input type="text" 
+                                         class="form-control"
+                                         datepicker-popup="{{format}}"
+                                         ng-model="dt2"
+                                         is-open="closed"
+                                         datepicker-options="dateOptions" 
+                                         date-disabled="disabled(date, mode)"
+                                         ng-required="true" 
+                                         close-text="Close">
+                                      </div>
+                                      <div class="space">
+                                       <p>To: {{dt2 | date:'fullDate'}}</p>
+                                      </div>
+                                   </div>
+
+            <div class="col-sm-6">
+		<table class="table table-bordered table-striped">
+			                                                           <tbody>
+                                                                                        <tr>
+<td colspan="2" bgcolor="#00c7f7">
+												
+												<center><i class="fa fa-youtube size-h3"></i></center>	
+												
+											</tr>
+											<tr>
+												<th>Views</th>
+												<td>12,300</td>
+											</tr>
+											<tr>
+												<th>Rating</th>
+												<td>5.0</td>
+											</tr>
+																					</tbody>
+									</table>
+            </div>
+           </div>
+                 <div class="modal-footer">
+                                <button class="btn btn-primary" ng-click="ok()">OK</button>
+                                <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+                 </div>
+         </script>
+
+                           <a href="javascript:;" class="btn-icon btn-icon-sm bg-primary"><i class="fa fa-paw" ng-click="open()"></i></a>
+                           </div>
+            
+                         <!-- end Modal -->
+
+               </section>
+        </div>
+     </div>
+        <center>Expand/Collapse   <a href="javascript:;" class="btn-icon btn-icon-sm bg-warning" ng-click="isCollapsed = !isCollapsed"><i class="fa fa-arrows-v"></i></a></center>
+       <hr>
+      <div collapse="isCollapsed">  
+       <div class="row">
+        <div class="col-sm-4">
+            <section class="panel panel-box">
+                        <div class="panel-top bg-instagram">
+                            <div class="divider divider"></div>
+                            <i class="fa fa-instagram size-h1"></i>
+                            <div class="divider divider"></div>
+                        </div>
+                        <div class="list-justified-container">
+                            <ul class="list-justified text-center">
+                                <li>
+                                       <p class="text-muted">Followers    <i class="fa fa-child size-h4"></i></p><br>
+                                       <p class="size-h3">8,205</p>
+                                    </li>
+                                <li>
+                                    <p class="text-muted">Photos     <i class="fa fa-camera size-h4"></i></p><br>
+                                    <p class="size-h3">497</p>
+                                    
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="size-h4">Data Dossier</p>
+                        <div class="list-justified-container">
+                            <ul class="list-justified text-center">
+                                <li>
+                                    <p class="text-muted">Average Interaction
+                                    <p class="size-h4"><br>
+                                      <i class="fa fa-arrow-up size-h4"></i>  <span class="label label-success">34%</span></p>
+                                </li>
+                                <li>
+                                    <p class="text-muted">Handle Mentions
+                                    <p class="size-h4"><br>
+                                     <i class="fa fa-arrow-down size-h4"></i>  <span class="label label-danger">17%</span></p>
+                                    </li>
+                            </ul>
+                        </div>
+               <!-- Modal -->
+            
+                            <div class="space" data-ng-controller="ModalDemoCtrl">
+                               <script type="text/ng-template" id="myModalContent.html">
+                                 <div class="modal-body">
+                                  <div class="panel-body" data-ng-controller="DatepickerDemoCtrl">
+                                   <div class="row">
+                                    <div class="col-sm-4">
+                                     <div class="input-group ui-datepicker">
+                                      <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                      <input type="text" 
+                                         class="form-control"
+                                         datepicker-popup="{{format}}"
+                                         ng-model="dt1"
+                                         is-open="opened"
+                                         datepicker-options="dateOptions" 
+                                         date-disabled="disabled(date, mode)"
+                                         ng-required="true" 
+                                         close-text="Close">
+                                      </div>
+                                      <div class="space">
+                                       <p>From: {{dt1 | date:'fullDate'}}</p>
+                                      </div>
+                                    <div class="input-group ui-datepicker">
+                                      <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                      <input type="text" 
+                                         class="form-control"
+                                         datepicker-popup="{{format}}"
+                                         ng-model="dt2"
+                                         is-open="closed"
+                                         datepicker-options="dateOptions" 
+                                         date-disabled="disabled(date, mode)"
+                                         ng-required="true" 
+                                         close-text="Close">
+                                      </div>
+                                      <div class="space">
+                                       <p>To: {{dt2 | date:'fullDate'}}</p>
+                                      </div>
+                                   </div>
+
+            <div class="col-sm-6">
+		<table class="table table-bordered table-striped">
+			                                                           <tbody>
+                                                                                        <tr>
+<td colspan="2">
+												
+												<center><i class="fa fa-instagram size-h3"></i></center>	
+												
+											</tr>
+											<tr>
+												<th>Total Photos Shared</th>
+												<td>123</td>
+											</tr>
+											<tr>
+												<th>Likes</th>
+												<td>500</td>
+											</tr>
+                                                                                        <tr>
+												<th>Comments</th>
+												<td>40</td>
+											</tr>
+																					</tbody>
+									</table>
+            </div>
+           </div>
+                 <div class="modal-footer">
+                                <button class="btn btn-primary" ng-click="ok()">OK</button>
+                                <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+                 </div>
+         </script>
+
+                           <a href="javascript:;" class="btn-icon btn-icon-sm bg-primary"><i class="fa fa-paw" ng-click="open()"></i></a>
+                           </div>
+            
+                         <!-- end Modal -->
+               </section>
+        </div>
+        <div class="col-sm-4">
+            <section class="panel panel-box">
+                        <div class="panel-top bg-wikipedia">
+                            <div class="divider divider"></div>
+                            <i class="fa fa-won size-h1"></i>
+                            <div class="divider divider"></div>
+                        </div>
+                        <div class="list-justified-container">
+                            <ul class="list-justified text-center">
+                                <li>
+                                       <p class="text-muted">Page Views    <i class="fa fa-share-square size-h4"></i></p><br>
+                                       <p class="size-h3">5,591</p>
+                                    </li>
+                                </ul>
+                        </div>
+                        <p class="size-h4">Data Dossier</p>
+                        <div class="list-justified-container">
+                            <ul class="list-justified text-center">
+                                <li>
+                                    <p class="text-muted">Page Views
+                                    <p class="size-h4"><br>
+                                      <i class="fa fa-arrow-up size-h4"></i>  <span class="label label-success">7.2%</span></p>
+                                </li>
+                             </ul>
+                        </div>
+               <!-- Modal -->
+            
+                            <div class="space" data-ng-controller="ModalDemoCtrl">
+                               <script type="text/ng-template" id="myModalContent.html">
+                                 <div class="modal-body">
+                                  <div class="panel-body" data-ng-controller="DatepickerDemoCtrl">
+                                   <div class="row">
+                                    <div class="col-sm-4">
+                                     <div class="input-group ui-datepicker">
+                                      <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                      <input type="text" 
+                                         class="form-control"
+                                         datepicker-popup="{{format}}"
+                                         ng-model="dt1"
+                                         is-open="opened"
+                                         datepicker-options="dateOptions" 
+                                         date-disabled="disabled(date, mode)"
+                                         ng-required="true" 
+                                         close-text="Close">
+                                      </div>
+                                      <div class="space">
+                                       <p>From: {{dt1 | date:'fullDate'}}</p>
+                                      </div>
+                                    <div class="input-group ui-datepicker">
+                                      <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                      <input type="text" 
+                                         class="form-control"
+                                         datepicker-popup="{{format}}"
+                                         ng-model="dt2"
+                                         is-open="closed"
+                                         datepicker-options="dateOptions" 
+                                         date-disabled="disabled(date, mode)"
+                                         ng-required="true" 
+                                         close-text="Close">
+                                      </div>
+                                      <div class="space">
+                                       <p>To: {{dt2 | date:'fullDate'}}</p>
+                                      </div>
+                                   </div>
+
+            <div class="col-sm-6">
+		<table class="table table-bordered table-striped">
+			                                                           <tbody>
+                                                                                        <tr>
+<td colspan="2">
+												
+												<center><i class="fa fa-wikipedia size-h3"></i></center>	
+												
+											</tr>
+											<tr>
+												<th>Page Views</th>
+												<td>623</td>
+											</tr>
+											
+																					</tbody>
+									</table>
+            </div>
+           </div>
+                 <div class="modal-footer">
+                                <button class="btn btn-primary" ng-click="ok()">OK</button>
+                                <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+                 </div>
+         </script>
+
+                           <a href="javascript:;" class="btn-icon btn-icon-sm bg-primary"><i class="fa fa-paw" ng-click="open()"></i></a>
+                           </div>
+            
+                         <!-- end Modal -->
+               </section>
+        </div>
+        <div class="col-sm-4">
+            <section class="panel panel-box">
+                        <div class="panel-top bg-pinterest">
+                            <div class="divider divider"></div>
+                            <i class="fa fa-pinterest size-h1"></i>
+                            <div class="divider divider"></div>
+                        </div>
+                        <div class="list-justified-container">
+                            <ul class="list-justified text-center">
+                                <li>
+                                       <p class="text-muted">Followers    <i class="fa fa-child size-h4"></i></p><br>
+                                       <p class="size-h3">427</p>
+                                    </li> 
+                                <li>
+                                       <p class="text-muted">Boards    <i class="fa fa-file-image-o size-h4"></i></p><br>
+                                       <p class="size-h3">31</p>
+                                    </li>
+                                <li>
+                                       <p class="text-muted">Pins    <i class="fa fa-paperclip size-h4"></i></p><br>
+                                       <p class="size-h3">156</p>
+                                    </li>
+                                </ul>
+                        </div>
+                        <p class="size-h4">Data Dossier</p>
+                        <div class="list-justified-container">
+                            <ul class="list-justified text-center">
+                                <li>
+                                    <p class="text-muted">Board Views
+                                    <p class="size-h4"><br>
+                                      <i class="fa fa-arrow-up size-h4"></i>  <span class="label label-success">0.5%</span></p>
+                                </li>
+                                <li>
+                                    <p class="text-muted">Pin Views
+                                    <p class="size-h4"><br>
+                                      <i class="fa fa-arrow-up size-h4"></i>  <span class="label label-success">0.5%</span></p>
+                                </li>
+                             </ul>
+                        </div>
+               <!-- Modal -->
+            
+                            <div class="space" data-ng-controller="ModalDemoCtrl">
+                               <script type="text/ng-template" id="myModalContent.html">
+                                 <div class="modal-body">
+                                  <div class="panel-body" data-ng-controller="DatepickerDemoCtrl">
+                                   <div class="row">
+                                    <div class="col-sm-4">
+                                     <div class="input-group ui-datepicker">
+                                      <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                      <input type="text" 
+                                         class="form-control"
+                                         datepicker-popup="{{format}}"
+                                         ng-model="dt1"
+                                         is-open="opened"
+                                         datepicker-options="dateOptions" 
+                                         date-disabled="disabled(date, mode)"
+                                         ng-required="true" 
+                                         close-text="Close">
+                                      </div>
+                                      <div class="space">
+                                       <p>From: {{dt1 | date:'fullDate'}}</p>
+                                      </div>
+                                    <div class="input-group ui-datepicker">
+                                      <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                      <input type="text" 
+                                         class="form-control"
+                                         datepicker-popup="{{format}}"
+                                         ng-model="dt2"
+                                         is-open="closed"
+                                         datepicker-options="dateOptions" 
+                                         date-disabled="disabled(date, mode)"
+                                         ng-required="true" 
+                                         close-text="Close">
+                                      </div>
+                                      <div class="space">
+                                       <p>To: {{dt2 | date:'fullDate'}}</p>
+                                      </div>
+                                   </div>
+
+            <div class="col-sm-6">
+		<table class="table table-bordered table-striped">
+			                                                           <tbody>
+                                                                                        <tr>
+<td colspan="2">
+												
+												<center><i class="fa fa-pinterest size-h3"></i></center>	
+												
+											</tr>
+											<tr>
+												<th>Total Boards</th>
+												<td>123</td>
+											</tr>
+											<tr>
+												<th>Total Pins</th>
+												<td>500</td>
+											</tr>
+                                                                                        <tr>
+												<th>Repins</th>
+												<td>40</td>
+											</tr>
+                                                                                        <tr>
+												<th>Likes</th>
+												<td>210</td>
+											</tr>
+																					</tbody>
+									</table>
+            </div>
+           </div>
+                 <div class="modal-footer">
+                                <button class="btn btn-primary" ng-click="ok()">OK</button>
+                                <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+                 </div>
+         </script>
+
+                           <a href="javascript:;" class="btn-icon btn-icon-sm bg-primary"><i class="fa fa-paw" ng-click="open()"></i></a>
+                           </div>
+            
+                         <!-- end Modal -->
+               </section>
+        </div>
+      </div>
+     </div>
                             </span>
                             <form data-ng-submit="doneEditing(task, $index)">
                                 <input type="text"
